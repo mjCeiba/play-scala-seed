@@ -1,0 +1,18 @@
+
+GET     /                           controllers.HomeController.index()
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
+
+
+GET     /hello                  controllers.HomeController.sayHelloWorld()
+GET     /returnAsResult         controllers.HomeController.returnAsResult()
+GET     /notFound               controllers.HomeController.notFound
+GET     /items/$id<[0-9]+>      controllers.HomeController.show(id: Long)
+GET     /clients/:id            controllers.HomeController.returnId(id: Long)
+POST    /returnWholeBody        controllers.HomeController.returnWholeBody()
+GET     /html                   controllers.HomeController.returnHTML()
+GET     /wsv                    controllers.HomeController.writerSessionValue()
+GET     /rsv                    controllers.HomeController.readerSessionValue()
+GET     /dsv                    controllers.HomeController.discardSessionValue()
+
+
+GET     /futureRequest          controllers.AsyncController.futureRequest()
